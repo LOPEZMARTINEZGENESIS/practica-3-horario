@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Horario Aesthetic </title>
+    
+    <!--  esto es lo que nos hara los estilos de mi horario -->
+    <style>
+        /* Cambiamos el fondo de la pantalla a un rosa clarito  */
+        body {
+            background-color: #ffe6f0; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* titulo principal */
+        h1 {
+            color: #d63384;
+        }
+
+        /*le damos un formato a la tabla para que salga rosa bajito y fuertes */
+        table {
+            width: 90%;
+            margin: auto; /* Para centrar la tabla */
+            border-collapse: collapse; /* Para que las líneas no se vean dobles */
+            background-color: white; /* Fondo blanco para que resalte */
+            border: 3px solid #ffb6c1; /* Borde rosa claro */
+        }
+
+        /* Estilo para los títulos de los días (Lunes, Martes...) */
+        th {
+            background-color: #ff69b4; /* Rosa fuerte deslumbrante */
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Estilo para las casillas de las materias */
+        td {
+            border: 1px solid #ffc0cb;
+            padding: 8px;
+            font-size: 13px;
+        }
+
+        /* Estilo  para la columna de las horas */
+        .hora {
+            background-color: #fff0f5;
+            font-weight: bold;
+            color: #c71585;
+        }
+
+        /* Estilo  para la fila del recreo */
+        .recreo {
+            background-color: #ffe4e1;
+            font-weight: bold;
+            color: #d63384;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título  -->
+    <h1> Mi Horario de Clases </h1>
+
+    <!-- ¡Inicio de la tabla de nuestro horario!  -->
+    <table>
+        <!-- <thead> es la parte de arriba donde van los nombres de los días -->
+        <thead>
+            <tr>
+                <th>Hora </th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+
+        <!-- <tbody> es el cuerpo de la tabla donde ponemos todas las materias -->
+        <tbody>
+            <!-- Fila 1: 7:00 a 8:00 -->
+            <tr>
+                <td class="hora">7:00<br>8:00</td>
+                <td><b>PROG M4S1</b><br>Meza<br>AULA 22</td>
+                <td></td> <!-- Casilla vacía porque no hay clase -->
+                <td rowspan="2"><b>PROG M4S1</b><br>Meza<br>AULA 22</td> <!-- rowspan junta 2 filas -->
+                <td><b>5° CNEyT 5</b><br>Reyes<br>AULA 22</td>
+                <td><b>5° CNEyT 5</b><br>Reyes<br>AULA 22</td>
+            </tr>
+
+            <!-- Fila 2: 8:00 a 9:00 -->
+            <tr>
+                <td class="hora">8:00<br>9:00</td>
+                <td><b>5° CNEyT 5</b><br>Reyes<br>AULA 22</td>
+                <td></td> <!-- Vacía -->
+                <!-- El miércoles está unido con el de arriba -->
+                <td><b>PROG M4S1</b><br>Meza<br>AULA 22</td>
+                <td><b>PROG M4S1</b><br>Meza<br>AULA 22</td>
+            </tr>
+
+            <!-- Fila 3: 9:00 a 10:00 -->
+            <tr>
+                <td class="hora">9:00<br>10:00</td>
+                <td></td> <!-- Vacía -->
+                <td><b>5° TSdM 2</b><br>Silveyra<br>AULA 22</td>
+                <td><b>5° Apli. Adm</b><br>Nava Maira<br>AULA 22</td>
+                <td><b>5° FS</b><br>Nava Maira<br>AULA 22</td>
+                <td><b>5° Apli. Adm</b><br>Nava Maira<br>AULA 22</td>
+            </tr>
+
+            <!-- Fila 4: 10:00 a 10:50 -->
+            <tr>
+                <td class="hora">10:00<br>10:50</td>
+                <td><b>PROG M4S2</b><br>Gonzales A<br>AULA 22</td>
+                <td><b>PROG M4S2</b><br>Gonzales A<br>AULA 22</td>
+                <td><b>PROG M4S2</b><br>Gonzales A<br>AULA 22</td>
+                <td><b>PROG M4S2</b><br>Gonzales A<br>AULA 22</td>
+                <td><b>PROG M4S2</b><br>Gonzales A<br>AULA 22</td>
+            </tr>
+
+            <!-- fila de recreo Usamos colspan="5" para que la celda abarque los 5 días  -->
+            <tr class="recreo">
+                <td class="hora">10:50<br>11:10</td>
+                <td colspan="5">RECESO</td>
+            </tr>
+
+            <!-- Fila 5: 11:10 a 12:00 -->
+            <tr>
+                <td class="hora">11:10<br>12:00</td>
+                <td><b>5° TSdM 2</b><br>Silveyra<br>AULA 22</td>
+                <td rowspan="2"><b>PROG M4S1</b><br>Meza<br>AULA 22</td> <!-- Ocupa 2 bloques de hora -->
+                <td><b>5° TSdM 2</b><br>Silveyra<br>AULA 22</td>
+                <td><b>5° TSdM 2</b><br>Silveyra<br>AULA 22</td>
+                <td><b>5° TSdM 2</b><br>Silveyra<br>AULA 22</td>
+            </tr>
+
+            <!-- Fila 6: 12:00 a 1:00 -->
+            <tr>
+                <td class="hora">12:00<br>1:00</td>
+                <td><b>5° CH 2</b><br>Villa<br>AULA 22</td>
+                <!-- Martes unido con la celda de arriba -->
+                <td><b>5° CH 2</b><br>Villa<br>AULA 22</td>
+                <td><b>5° Apli. Adm</b><br>Nava Maira<br>AULA 22</td>
+                <td><b>5° CH 2</b><br>Villa<br>AULA 22</td>
+            </tr>
+
+            <!-- Fila 7: 1:00 A 2:00 -->
+            <tr>
+                <td class="hora">1:00<br>2:00</td>
+                <td><b>5° Ingles 5</b><br>R11</td>
+                <td><b>5° Ingles 5</b><br>R11</td>
+                <td><b>5° Ingles 5</b><br>R11</td>
+                <td><b>5° Ingles 5</b><br>R11</td>
+                <td><b>5° Ingles 5</b><br>R11</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
